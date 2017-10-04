@@ -16,13 +16,13 @@ public class JtlErrorRemover {
     {
         File fileToProcess = new File(args[0]);
 
-        //String successRegex = "(.*?),200,OK,(.*?)";
+        String successRegex = "(.*?),200,OK,(.*?)";
 
 
         Pattern   compiledPattern = Pattern.compile(successRegex);
 
 
-        File fileToProcess = new File("/Users/temp/jtl-error-remover/jtl-processor/C_500_T_600_P_100K_buyStocks.xml.jtl");
+        //File fileToProcess = new File("/Users/temp/jtl-error-remover/jtl-processor/C_500_T_600_P_100K_buyStocks.xml.jtl");
 
         try (BufferedReader fileReader = new BufferedReader(new FileReader(fileToProcess))) {
             try (BufferedWriter fileWriter = new BufferedWriter(new FileWriter(fileToProcess+"_"+"processed"))) {
