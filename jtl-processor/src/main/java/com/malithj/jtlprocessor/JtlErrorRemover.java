@@ -14,9 +14,9 @@ import java.util.regex.Pattern;
 public class JtlErrorRemover {
     public static void main( String[] args )
     {
-        //File fileToProcess = new File(args[0]);
+        File fileToProcess = new File(args[0]);
 
-        String successRegex = "(.*?),200,OK,(.*?)";
+        //String successRegex = "(.*?),200,OK,(.*?)";
 
 
         Pattern   compiledPattern = Pattern.compile(successRegex);
