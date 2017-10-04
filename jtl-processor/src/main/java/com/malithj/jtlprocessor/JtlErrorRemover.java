@@ -16,7 +16,7 @@ public class JtlErrorRemover {
         try (BufferedReader fileReader = new BufferedReader(new FileReader(fileToProcess))) {
             try (BufferedWriter fileWriter = new BufferedWriter(new FileWriter(fileToProcess+"_"+"processed"))) {
                 String line = fileReader.readLine();
-                if (line != null) {
+                while(line != null) {
                     fileWriter.write(line);
                     fileWriter.newLine();
                 }
